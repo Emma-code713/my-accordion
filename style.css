@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppin',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(my\ car.jpeg);
+    background-size: cover;
+}
+.accordion{
+    max-width: 800px;
+}
+.accordion .contentbx {
+    position: relative;
+    margin: 10px 20px;
+
+}
+.accordion .contentbx .label{
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: #fff;
+    cursor: pointer;
+}
+.accordion .contentbx .label::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translatey(-50%);
+    font-size: 1.5em;
+}
+.accordion .contentbx.active .label::before{
+    content: '-';
+    font-size: 1.5em;
+}
+.accordion .contentbx .content{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y:auto ;
+}
+.accordion .contentbx.active .content{
+    height: 150px;
+    padding: 10px;
+}
+
